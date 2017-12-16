@@ -1,0 +1,7 @@
+- op: replace
+  path: /resources/-
+  value:
+    name: pcf-pipelines
+    type: git
+    source:
+      uri: https://github.com/rsamban/custom-pipelines
