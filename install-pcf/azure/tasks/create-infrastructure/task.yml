@@ -15,7 +15,7 @@ outputs:
   - name: terraform-state-output
 
 run:
-  path: pcf-pipelines/install-pcf/azure/tasks/create-infrastructure/task.sh
+  path: custom-pipelines/install-pcf/azure/tasks/create-infrastructure/task.sh
 
 params:
   AZURE_PCF_TERRAFORM_TEMPLATE:
