@@ -1,0 +1,11 @@
+#change pcf-pipelines resource to pull from tag v0.21.1
+- type: replace
+  path: /resources/name=pcf-pipelines/source/uri
+  value: https://github.com/pivotal-cf/pcf-pipelines
+- type: remove
+  path: /resources/name=pcf-pipelines/source/branch
+- type: remove
+  path: /resources/name=pcf-pipelines/source/private_key
+- type: replace
+  path: /resources/name=pcf-pipelines/source/tag_filter?
+  value: v0.21.1
