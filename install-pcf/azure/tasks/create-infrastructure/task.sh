@@ -95,7 +95,7 @@ terraform plan \
   -out terraform.tfplan \
   -state terraform-state/terraform.tfstate \
   "pcf-pipelines/install-pcf/azure/terraform/${AZURE_PCF_TERRAFORM_TEMPLATE}"
-exit
+
 echo "=============================================================================================="
 echo "Executing Terraform Apply ..."
 echo "=============================================================================================="
