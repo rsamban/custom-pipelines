@@ -51,3 +51,6 @@
 - op: add
   path: /jobs/name=create-infrastructure/plan/task=create-infrastructure/params/PUB_IP_TCP_LB
   value: {{pub_ip_tcp_lb}}
+- op: add
+  path: /jobs/name=create-infrastructure/plan/task=create-infrastructure/params/AZURE_RESGROUP_PCF
+  value: {{azure_resgroup_pcf}}

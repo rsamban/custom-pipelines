@@ -83,16 +83,17 @@ terraform plan \
   -var "om_disk_size_in_gb=${PCF_OPSMAN_DISK_SIZE_IN_GB}" \
   -var "priv_ip_mysql_lb=${PRIV_IP_MYSQL_LB}" \
   -var "pub_ip_id_jumpbox_vm=${PUB_IP_ID_JUMPBOX_VM}" \
-  -var "pub_ip_id_opsman_vm=${ca-mol-opsmna-id}" \
-  -var "pub_ip_id_pcf_lb=${ca-mol-pub-ip-pcf_lb}" \
-  -var "pub_ip_id_ssh_proxy_lb=${ca-mol-pub-ip-ssh_proxy_lb}" \
-  -var "pub_ip_id_tcp_lb=${ca-mol-pub-ip-id-tcp_lb}" \
-  -var "pub_ip_jumpbox_vm=${ca-mol-pub-ip-jumpbox_vm}" \
-  -var "pub_ip_opsman_vm=${ca-mol-pub-ip-opsman_vm}" \
-  -var "pub_ip_ssh_proxy_lb=${ca-mol-pub-ip-ssh_proxy_lb}" \
-  -var "pub_ip_pcf_lb=${ca-mol-pub-ip-pcf_lb}" \
-  -var "pub_ip_tcp_lb=${ca-mol-pub-ip-tcp_lb}" \
-  -var "subnet_infra_id=${ca-mol-subnet_infra_id}" \
+  -var "pub_ip_id_opsman_vm=${PUB_IP_ID_OPSMAN_VM}" \
+  -var "pub_ip_id_pcf_lb=${PUB_IP_ID_PCF_LB}" \
+  -var "pub_ip_id_ssh_proxy_lb=${PUB_IP_ID_SSH_PROXY_LB}" \
+  -var "pub_ip_id_tcp_lb=${PUB_IP_ID_TCP_LB}" \
+  -var "pub_ip_jumpbox_vm=${PUB_IP_JUMPBOX_VM}" \
+  -var "pub_ip_opsman_vm=${PUB_IP_OPSMAN_VM}" \
+  -var "pub_ip_ssh_proxy_lb=${PUB_IP_SSH_PROXY_LB}" \
+  -var "pub_ip_pcf_lb=${PUB_IP_PCF_LB}" \
+  -var "pub_ip_tcp_lb=${PUB_IP_TCP_LB}" \
+  -var "subnet_infra_id=${SUBNET_INFRA_ID}" \
+  -var "azure_resgroup_pcf=${AZURE_RESGROUP_PCF}" \
   -out terraform.tfplan \
   -state terraform-state/terraform.tfstate \
   "pcf-pipelines/install-pcf/azure/terraform/${AZURE_PCF_TERRAFORM_TEMPLATE}"
