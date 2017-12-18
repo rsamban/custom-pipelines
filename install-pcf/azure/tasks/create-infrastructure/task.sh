@@ -8,7 +8,7 @@ fi
 #
 if [[ ! ${AZURE_PCF_TERRAFORM_TEMPLATE} == "c0-azure-multi-res-group" ]]; then
   cp custom-pipelines/install-pcf/azure/terraform/c0-azure-multi-res-group/* pcf-pipelines/install-pcf/azure/terraform/${AZURE_PCF_TERRAFORM_TEMPLATE}/
-
+fi
 #
 # Get ert subnet if multi-resgroup
 az login --service-principal -u ${AZURE_CLIENT_ID} -p ${AZURE_CLIENT_SECRET} --tenant ${AZURE_TENANT_ID}
@@ -83,7 +83,7 @@ terraform plan \
   -out terraform.tfplan \
   -state terraform-state/terraform.tfstate \
   "pcf-pipelines/install-pcf/azure/terraform/${AZURE_PCF_TERRAFORM_TEMPLATE}"
-
+exit
 echo "=============================================================================================="
 echo "Executing Terraform Apply ..."
 echo "=============================================================================================="
