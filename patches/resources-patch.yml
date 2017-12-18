@@ -8,4 +8,4 @@
   path: /resources/name=pcf-pipelines/source/private_key
 - type: replace
   path: /resources/name=pcf-pipelines/source/tag_filter?
-  value: v0.21.1
+  value: v0.21.2-rc.28

@@ -2,7 +2,13 @@
 TERRAFORM_STORAGE_NAME=moltfstate
 TERRAFORM_STORAGE_RG=mol-terraform-state-rg
 AZURE_LOCATION=westus
-# Create resource group if needed
+
+
+
+
+
+
+# Create resource group if needed - for storage account to store terrraform state
 if [[ -z $(az group list | jq --arg rg "$TERRAFORM_STORAGE_RG" '.[] | select(.name == $rg) | .name' | tr -d '"') ]]; then
   az group create -n "$TERRAFORM_STORAGE_RG" -l "$AZURE_LOCATION"
 fi

@@ -10,3 +10,7 @@
   path: /jobs/name=create-infrastructure/plan/0/aggregate/-
   value:
     get: custom-pipelines
+
+- op: add
+  path: /jobs/name=create-infrastructure/plan/task=create-infrastructure/file
+  value: custom-pipelines/install-pcf/azure/tasks/create-infrastructure/task.yml
