@@ -8,6 +8,7 @@ fi
 #
 if [[ ${AZURE_PCF_TERRAFORM_TEMPLATE} == "c0-azure-multi-res-group" ]]; then
   cp custom-pipelines/install-pcf/azure/terraform/c0-azure-multi-res-group/* pcf-pipelines/install-pcf/azure/terraform/${AZURE_PCF_TERRAFORM_TEMPLATE}/
+  rm pcf-pipelines/install-pcf/azure/terraform/${AZURE_PCF_TERRAFORM_TEMPLATE}/networks.tf
 fi
 #
 # Get ert subnet if multi-resgroup
