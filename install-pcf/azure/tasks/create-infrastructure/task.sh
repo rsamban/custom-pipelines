@@ -80,7 +80,7 @@ terraform plan \
   -var "azure_packages_container=${AZURE_PACKAGES_CONTAINER}" \
   -var "azure_resources_container=${AZURE_RESOURCES_CONTAINER}" \
   -var "om_disk_size_in_gb=${PCF_OPSMAN_DISK_SIZE_IN_GB}" \
-  -var "priv_ip_mysql_lb"=${PRIV_IP_MYSQL_LB}
+  -var "priv_ip_mysql_lb"=${PRIV_IP_MYSQL_LB} \
   -out terraform.tfplan \
   -state terraform-state/terraform.tfstate \
   "pcf-pipelines/install-pcf/azure/terraform/${AZURE_PCF_TERRAFORM_TEMPLATE}"
