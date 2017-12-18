@@ -14,3 +14,9 @@
 - op: add
   path: /jobs/name=create-infrastructure/plan/task=create-infrastructure/file
   value: custom-pipelines/install-pcf/azure/tasks/create-infrastructure/task.yml
+- op: add
+  path: /jobs/name=create-infrastructure/plan/task=create-infrastructure/params/PRIV_IP_MYSQL_LB
+  value: {{priv_ip_mysql_lb}}
+- op: add
+  path: /jobs/name=create-infrastructure/plan/task=create-infrastructure/params/PUB_IP_ID_JUMPBOX_VM
+  value: {{pub_ip_id_jumpbox_vm}}
